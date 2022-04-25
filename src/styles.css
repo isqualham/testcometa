@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #efefef;
+}
+
+div{
+    width: 750px;
+    margin: 0 auto;
+}
+
+header{
+    border: 1px solid #000;
+}
+
+nav{
+    margin: 50px 0 0 0;
+    width: 450px;
+    float: right;
+}
+
+nav a{
+    margin: 0 100px 0 0;
+}
+
+section {
+    margin: 50px 0 0 0;
+    height: 150px;
+}

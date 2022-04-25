@@ -1,3 +1,8 @@
+No projeto foi utilizado PHP dendo isto em vista é necessário instalar um processador de PHP no caso instalei 
+o wampserver : https://www.wampserver.com/en/, pois já está incluso o processador de PHP e o banco de dados MYSQL 
+
+
+
 dlN8$^QorNi%g1HHezof
 
 
