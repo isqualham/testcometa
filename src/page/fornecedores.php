@@ -1,5 +1,6 @@
 <?php
-    include_once ('php/cep.php')
+    include_once ('php/cep.php');
+    $dados = getDados();
 ?>
 
 <!DOCTYPE html>
