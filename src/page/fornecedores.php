@@ -37,7 +37,7 @@
 
                     <input type="text" name="cnpj" placeholder="CNPJ" ><br><br>    
                                               
-                    <input type="text" name="cep" placeholder="CEP"
+                    <input type="text" name="cep" placeholder="CEP insira apenas números"
                         value="<?php echo $dados->cep ?>">
                     <button id="button">consultar</button><br><br>
 
