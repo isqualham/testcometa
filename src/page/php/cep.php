@@ -1,10 +1,22 @@
 <?php
 
-    $cep = '78217000';
+    //criando um objeto para atribuir os dados do via cep
+    $dados = (object) [
+        'cep' => '',
+        'logradouro' => '',
+        'bairro' => '',
+        'localidade' => '',
+        'uf' => '',
+        'ibge' => ''
+    ];
 
-    $url = "https://viacep.com.br/ws/{$cep}/json/";
+    //comparação para verificar se existe algum cep digitado
+    if(isset ($_POST['cep'])){
 
-    $endereco = file_get_contents($url);
+        $cep = $_POST['cep'];
 
-    var_dump($endereco);
+        $url = "https://viacep.com.br/ws/{$cep}/json/";
+
+        $dados = json_decode(file_get_contents($url));
+    }
 ?>

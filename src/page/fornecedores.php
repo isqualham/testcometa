@@ -1,5 +1,5 @@
 <?php
-    include_once ('cep.php')
+    include_once ('php/cep.php')
 ?>
 
 <!DOCTYPE html>
@@ -19,27 +19,42 @@
             </a>  
             <nav>
                                               
-                <a href="fornecedores.html">Cadastro de Fornecedores</a>
+                <a href="fornecedores.php">Cadastro de Fornecedores</a>
                 <a href="cliente.html">Cadastro de Clientes</a>
 
             </nav>             
         </header>
 
         <section>
+            
             <form action="" method="post">
                 <fieldset>
                     <legend>Cadastro de fornecedores</legend>   
 
                     <input type="text" name="nome" placeholder="Nome"><br><br>
+
                     <input type="text" name="telefone" placeholder="Telefone"><br><br>
-                    <input type="text" name="cnpj" placeholder="CNPJ" ><br><br>                   
-                    <input type="text" id="cep" name="cep" placeholder="CEP">
-                    <button onclick="consultaCep()" id="button">consultar</button><br><br>
-                    <input type="text" name="rua" placeholder="Rua"><br><br>
-                    <input type="text" name="bairro" placeholder="Bairro"><br><br>
-                    <input type="text" name="cidade" placeholder="Cidade"><br><br>
-                    <input type="text" name="estado" placeholder="Estado"><br><br>
-                    <input type="text" name="ibge" placeholder="IBGE"><br><br>
+
+                    <input type="text" name="cnpj" placeholder="CNPJ" ><br><br>    
+                                              
+                    <input type="text" name="cep" placeholder="CEP"
+                        value="<?php echo $dados->cep ?>">
+                    <button id="button">consultar</button><br><br>
+
+                    <input type="text" name="rua" placeholder="Rua"
+                        value="<?php echo $dados->logradouro ?>"><br><br>
+
+                    <input type="text" name="bairro" placeholder="Bairro"
+                        value="<?php echo $dados->bairro ?>"><br><br>
+
+                    <input type="text" name="cidade" placeholder="Cidade"
+                        value="<?php echo $dados->localidade ?>"><br><br>
+
+                    <input type="text" name="estado" placeholder="Estado"
+                        value="<?php echo $dados->uf ?>"><br><br>
+
+                    <input type="text" name="ibge" placeholder="IBGE"
+                        value="<?php echo $dados->ibge ?>"><br><br>
 
                     <input type="submit" value="cadastrar" id="button">
                     
