@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
     include_once ('backend/cep.php');
+=======
+    include_once ('php/cep.php');
+>>>>>>> 74ac88df9be87cc7149bf243cf5c1c1c98e2712a
     $dados = getDados();
 ?>
 
