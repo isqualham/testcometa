@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
     include_once ('backend/cep.php');
-=======
-    include_once ('php/cep.php');
->>>>>>> 74ac88df9be87cc7149bf243cf5c1c1c98e2712a
     $dados = getDados();
 ?>
 
@@ -31,36 +27,36 @@
 
         <section>
             
-            <form action="cadastrarFornecedor.php" method="post">
+            <form action="backend/cadastrarFornecedor.php" method="post">
                 <fieldset>
                     <legend>Cadastro de fornecedores</legend>   
 
-                    <input type="text" name="nome" placeholder="Nome"><br><br>
+                    <input type="text" name="nome" placeholder="Nome" required><br><br>
 
-                    <input type="text" name="telefone" placeholder="Telefone"><br><br>
+                    <input type="text" name="telefone" placeholder="Celular exemplo: 65-999187823" required minlength="12"><br><br>
 
-                    <input type="text" name="cnpj" placeholder="CNPJ" ><br><br>    
+                    <input type="text" name="cnpj" placeholder="CNPJ exemplo: 999.999/0001-99" required minlength="15"><br><br>    
                                               
                     <input type="text" name="cep" placeholder="CEP insira apenas números"
-                        value="<?php echo $dados->cep ?>"><br>
-                        <a href="forneCep.html">voltar para válidação de cep</a><br><br>
+                        value="<?php echo $dados->cep ?>" required><br>
+                        <a href="forneCep.html" id="cep">voltar para válidação de cep</a><br><br>
 
                     <input type="text" name="rua" placeholder="Rua"
-                        value="<?php echo $dados->logradouro ?>"><br><br>
+                        value="<?php echo $dados->logradouro ?>" required><br><br>
 
                     <input type="text" name="bairro" placeholder="Bairro"
-                        value="<?php echo $dados->bairro ?>"><br><br>
+                        value="<?php echo $dados->bairro ?>" required><br><br>
 
                     <input type="text" name="cidade" placeholder="Cidade"
-                        value="<?php echo $dados->localidade ?>"><br><br>
+                        value="<?php echo $dados->localidade ?>" required><br><br>
 
                     <input type="text" name="estado" placeholder="Estado"
-                        value="<?php echo $dados->uf ?>"><br><br>
+                        value="<?php echo $dados->uf ?>" required><br><br>
 
                     <input type="text" name="ibge" placeholder="IBGE"
-                        value="<?php echo $dados->ibge ?>"><br><br>
+                        value="<?php echo $dados->ibge ?>" required><br><br>
                     
-                    <button id="button">cadastrar</button><br>
+                    <button type="submit" id="button">cadastrar</button><br>
                     
                 </fieldset>               
             </form>
