@@ -11,13 +11,9 @@
 
         <header>
             <a href="../../index.html">
-                <img src="../image/logo.svg" width="350px" height="150px" />
+                <img src="../image/logo.svg" width="350px" height="150px"/>
             </a>  
-            <nav>
-                                              
-                <a href="forneCep.html">Cadastro de Fornecedores</a>
-
-            </nav>             
+                        
         </header>
 
         <section>
@@ -25,6 +21,16 @@
             <form action="fornecedores.php" method="post">
                 <fieldset>
                     <legend>Cadastro de fornecedores</legend>
+                                                              
+                    <input type="text" name="cep" placeholder="CEP insira apenas números"><br><br>
+                    <button id="button">consultar</button><br>
+                    
+                </fieldset>               
+            </form>
+
+            <form action="cliente.php" method="post" id="cliente">
+                <fieldset>
+                    <legend>Cadastro de Clientes</legend>
                                                               
                     <input type="text" name="cep" placeholder="CEP insira apenas números"><br><br>
                     <button id="button">consultar</button><br>
