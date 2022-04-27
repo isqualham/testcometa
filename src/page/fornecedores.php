@@ -1,5 +1,6 @@
 <?php
-    include_once ('php/cep.php')
+    include_once ('backend/cep.php');
+    $dados = getDados();
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +20,14 @@
             </a>  
             <nav>
                                               
-                <a href="fornecedores.php">Cadastro de Fornecedores</a>
-                <a href="cliente.html">Cadastro de Clientes</a>
+                <a href="forneCep.html">Cadastro de Fornecedores</a>
 
             </nav>             
         </header>
 
         <section>
             
-            <form action="" method="post">
+            <form action="cadastrarFornecedor.php" method="post">
                 <fieldset>
                     <legend>Cadastro de fornecedores</legend>   
 
@@ -38,8 +38,8 @@
                     <input type="text" name="cnpj" placeholder="CNPJ" ><br><br>    
                                               
                     <input type="text" name="cep" placeholder="CEP insira apenas números"
-                        value="<?php echo $dados->cep ?>">
-                    <button id="button">consultar</button><br><br>
+                        value="<?php echo $dados->cep ?>"><br>
+                        <a href="forneCep.html">voltar para válidação de cep</a><br><br>
 
                     <input type="text" name="rua" placeholder="Rua"
                         value="<?php echo $dados->logradouro ?>"><br><br>
@@ -55,8 +55,8 @@
 
                     <input type="text" name="ibge" placeholder="IBGE"
                         value="<?php echo $dados->ibge ?>"><br><br>
-
-                    <input type="submit" value="cadastrar" id="button">
+                    
+                    <button id="button">cadastrar</button><br>
                     
                 </fieldset>               
             </form>
