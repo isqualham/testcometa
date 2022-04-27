@@ -11,13 +11,12 @@
     $estado   = $_POST['estado'];
     $ibge     = $_POST['ibge'];
 
-    if(validarTelefone($telefone) && validarCnpj($cnpj)){
-        $sql ="INSERT INTO 
-        fornecedores(nome,telefone,cnpj,cep,rua,bairro,cidade,estado,ibge)
-        VALUES ('$nome', '$telefone', '$cnpj', '$cep', '$rua', '$bairro', '$cidade', '$estado', '$ibge')"
+    if((validarTelefone($telefone) && validarCnpj($cnpj))){
+        $sql ="INSERT INTO fornecedor(nome,telefone,cnpj,cep,rua,bairro,cidade,estado,ibge)
+        VALUES ('$nome', '$telefone', '$cnpj', '$cep', '$rua', '$bairro', '$cidade', '$estado', '$ibge')";
 
         if(mysqli_query($conexao, $sql)){
-            echo "Fornecedor cadastrado com sucesso"
+            echo "Fornecedor cadastrado com sucesso";
         }else{
             echo "não foi possível realizar o cadastro".mysqli_connect_error($conexao);
         }
