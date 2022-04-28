@@ -1,5 +1,26 @@
-No projeto foi utilizado PHP dendo isto em vista é necessário instalar um processador de PHP no caso instalei 
-o wampserver : https://www.wampserver.com/en/, pois já está incluso o processador de PHP e o banco de dados MYSQL 
+passo1:
+	primeiramente tem que instalar um servidor local escolhi ultilizar o wampserver segue o link para donwload:  https://www.wampserver.com/en/
+	com wampserver tu irá além de fazer um servidor local também tera uma ferramenta para criação de banco de dados mysql, que no caso
+	é o phpmyadmim
+passo2:
+	baixar do repositório publico o projeto como um todo segue o link: https://github.com/isqualham/testcometa
+passo3:
+	com o servidor wampserver instalado você ira colocar a pasta do projeto na pasta www, está pastá é responsável na execução do projeto
+passo4:
+	dentro do projeto tem um pasta chmada mysql onde terá o banco de dados utilizado apenas para vocÊ realizar a importação para o phpmayadmin
+passo5:
+	agora terá que executar o wampserver após essa execução vai no seu navegador e digite o endereço: http://localhost/test/index.html
+passo6:
+	se caso ficou ainda em dúvida tem esse link de um video explicando passo a passo como realizar a configuração do projeto.
+
+
+
+
+
+
+
+
+
 
 
 …or create a new repository on the command line
